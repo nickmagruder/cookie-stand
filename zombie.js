@@ -473,3 +473,48 @@ console.log(city5Sum) */
 + a Total */
 
 /* 6am: 16 cookies */
+
+function generateHeaderRow() {
+    var insertParent = document.getElementById('cookiedata');
+    var trElement = document.createElement('tr');
+    insertParent.appendChild(trElement);
+    var thElement = document.createElement('th');
+    thElement.textContent = 'City';
+    trElement.appendChild(thElement);
+    for (var i = 0; i < hoursArray.length; i++) {
+        var insertTh = document.createElement('th');
+        thElement.textContent = hoursArray[i];
+        trElement.appendChild(thElement);
+    }
+}
+
+generateHeaderRow()
+
+
+    // get parent element
+    // make a tr
+    // append to the parent
+    // make a th element
+    // fill it with content
+    // append to the tr
+
+
+    function generateFooterRow() {
+
+        var totalOfAllTotals = 0;
+        var insertParent = document.getElementById('cookiedata');
+        var trElememt = document.createElement('tr');
+        parent.appendChild(trElement);
+
+        for (var i = 0; i < hoursArray.length; i++){
+            var hourlyTotal = 0;
+
+            for(var j=0; j<allStores.length; j++){
+                hourlyTotal += allStores[j].cookiesSoldEachHour[i];
+                totalOfAllTotals += allStores[j].cookiesSoldEachHour[i];
+
+            }
+
+        }
+    }
+ 

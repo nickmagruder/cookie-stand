@@ -52,15 +52,30 @@ Allcitydata.prototype.insert = function () {
     insertTr.appendChild(insertTotalTh);
 }
 
+function generateHeaderRow() {
+    var insertTr = document.createElement('tr');
+    var insertTh = document.createElement('th');
+    var insertTotalTh = document.createElement('th')
+    insertTh.textContent = 'City';
+    insertTr.appendChild(insertTh);
+    for (var i = 0; i < hoursArray.length; i++) {
+        var insertTd = document.createElement('th');
+        insertTd.textContent = hoursArray[i];
+        insertTr.appendChild(insertTd);
+    }
+    insertParent.appendChild(insertTr);
+    insertTotalTh.textContent = 'Total';
+    insertTr.appendChild(insertTotalTh);
+}
+
+generateHeaderRow()
+
+
+
 seattle.insert();
 tokyo.insert();
 dubai.insert();
 paris.insert();
 lima.insert();
-
-
-
-
-
 
 
