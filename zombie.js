@@ -80,25 +80,6 @@ var spaceNeedle = {
 
 spaceNeedle.render();
 
-var city1Sum = city1Values.reduce(function (a, b) {
-    return a + b;
-}, 0);
-
-var city2Sum = city2Values.reduce(function (a, b) {
-    return a + b;
-}, 0);
-
-var city3Sum = city3Values.reduce(function (a, b) {
-    return a + b;
-}, 0);
-
-var city4Sum = city4Values.reduce(function (a, b) {
-    return a + b;
-}, 0);
-
-var city5Sum = city5Values.reduce(function (a, b) {
-    return a + b;
-}, 0);
 
 
 
@@ -455,6 +436,26 @@ insert3();
 insert4();
 insert5();
 
+
+var city1Sum = city1Values.reduce(function (a, b) {
+    return a + b;
+}, 0);
+
+var city2Sum = city2Values.reduce(function (a, b) {
+    return a + b;
+}, 0);
+
+var city3Sum = city3Values.reduce(function (a, b) {
+    return a + b;
+}, 0);
+
+var city4Sum = city4Values.reduce(function (a, b) {
+    return a + b;
+}, 0);
+
+var city5Sum = city5Values.reduce(function (a, b) {
+    return a + b;
+}, 0);
 
 
 /* Array Totaling Hint adapted from this tutorial: https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php */

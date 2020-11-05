@@ -12,8 +12,12 @@ function randomizer(min, max, avg) {
     }
     return randomArray
 }
-
-/* console.log(randomizer(23, 65, 6.3)); */
+// array totaler adapted from: https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
+function cityTotaler(array) {
+    return array.reduce(function (a, b) {
+        return (a + b)
+    }, 0);
+}
 
 function Allcitydata(cityname, minCust, maxCust, avgCookie,) {
     this.cityname = cityname;
@@ -21,6 +25,7 @@ function Allcitydata(cityname, minCust, maxCust, avgCookie,) {
     this.maxCust = maxCust;
     this.avgCookie = avgCookie;
     this.randomHrCookies = randomizer(minCust, maxCust, avgCookie);
+    this.cityTotal = cityTotaler(this.randomHrCookies);
 
     cityData.push(this);
 }
@@ -31,12 +36,10 @@ var dubai = new Allcitydata('Dubai', 11, 38, 3.7);
 var paris = new Allcitydata('Paris', 20, 38, 2.3);
 var lima = new Allcitydata('Lima', 2, 16, 4.6);
 
-/* console.log(cityData); */
-
-
 Allcitydata.prototype.insert = function () {
     var insertTr = document.createElement('tr');
     var insertTh = document.createElement('th');
+    var insertTotalTh = document.createElement('th')
     insertTh.textContent = this.cityname;
     insertTr.appendChild(insertTh);
     for (var i = 0; i < hoursArray.length; i++) {
@@ -45,6 +48,8 @@ Allcitydata.prototype.insert = function () {
         insertTr.appendChild(insertTd);
     }
     insertParent.appendChild(insertTr);
+    insertTotalTh.textContent = this.cityTotal;
+    insertTr.appendChild(insertTotalTh);
 }
 
 seattle.insert();
@@ -52,26 +57,6 @@ tokyo.insert();
 dubai.insert();
 paris.insert();
 lima.insert();
-
-
-
-    // Sum:
-/*     var city1Sum = city1Values.reduce(function (a, b) {
-        return a + b;
-    }, 0);
-    var insertParent = document.getElementById('cookiedata');
-    var insertLi = document.createElement('li');
-    insertLi.textContent = 'Total: ' + city1Sum;
-    insertParent.appendChild(insertLi);
-} */
-
-
-
-
-
-
-
-
 
 
 
