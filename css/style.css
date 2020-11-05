@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(240, 222, 193);
+    font-family: verdana;
+
+}
+
+.location {
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    float: left;
+
+}
+
+th,  td {
+    padding: 10px;
+    margin: 1px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+footer{
+    clear: both;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    width: 100px;
+}
