@@ -1,7 +1,7 @@
 
 /* Math.floor to remove decimal */
 
-function numGuessingGame(){
+/* function numGuessingGame(){
 
     for (var guesses = 0; guesses < 4; guesses++) {
         var guess = parseInt(prompt('Guess my favorite number! It is between 1-100 and you have 4 attempts!'));
@@ -46,7 +46,7 @@ function guessingBirds(){
 }
 
 guessingBirds();
-
+ */
 
 /* console.log(randomInput(city1.minCust, city1.maxCust, city1.avgCookie));
 console.log(randomInput(city2.minCust, city2.maxCust, city2.avgCookie));
@@ -66,7 +66,7 @@ console.log(city3Output)
 console.log(city4Output)
 console.log(city5Output) */
 
-var spaceNeedle = {
+/* var spaceNeedle = {
     filepath: './img/spaceneedle.jpg',
     alt: 'Seattle Sunset',
     title: 'Seattle Sunset',
@@ -78,7 +78,7 @@ var spaceNeedle = {
 }
 }
 
-spaceNeedle.render();
+spaceNeedle.render(); */
 
 
 
@@ -109,7 +109,7 @@ spaceNeedle.render();
     // Genereate the array of customers per hour
         //using Math.random, min and max customers
 
-        var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+       /*  var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
         var seattleStore = {
             city: 'Seattle',
@@ -120,17 +120,17 @@ spaceNeedle.render();
         
             customersEachHour: [],
             cookiesSoldEachHour: [],
-        
+         */
                 // generate the customers each hour
-            generateCustomersEachHour: function(){
+/*             generateCustomersEachHour: function(){
                 for(var i=0; i<hours.length; i++){
                     var randomCustomerNumber = generateRandomNumber(this.minCustomers)
                     this.customersEachHour.push(randomCustomerNumber);
                 }
-            }
+            } */
                 //generate the cookies sold each hour
                 // loop over my customersEachHour and multiply that number by my avg cookie sale
-            generateCookiesSoldEachHour: function(){
+/*             generateCookiesSoldEachHour: function(){
                 for(var i=0; i < this.customersEachHour.length; i++){
                     var cookieTotalForTheHour = this.customersEachHour[i] * this.averageCookieSale
                     this.cookiesSoldEachHour.push(cookieTotalForTheHour);
@@ -138,15 +138,15 @@ spaceNeedle.render();
                 this.cookiesFOrTheDay += cookiesSoldEachHour;
         
                 }
-            }
+            } */
                 //render the cookiesSOldEach Hour to the DOM
-            render: function(){
+/*             render: function(){
         
             }
         }
-        
+         */
         //helper function
-        function generateRandomNumber(min, max){
+/*         function generateRandomNumber(min, max){
         return Math.floor()
         
         minCustomers= Math.ceil(minCustomers);
@@ -158,7 +158,7 @@ spaceNeedle.render();
         seattleStore.generateCustomersEachHour();
         seattleStore.generateCookiesSoldEachHour()
         
-        
+         */
         
         
         
