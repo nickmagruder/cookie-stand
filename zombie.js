@@ -499,22 +499,5 @@ generateHeaderRow()
     // append to the tr
 
 
-    function generateFooterRow() {
 
-        var totalOfAllTotals = 0;
-        var insertParent = document.getElementById('cookiedata');
-        var trElememt = document.createElement('tr');
-        parent.appendChild(trElement);
-
-        for (var i = 0; i < hoursArray.length; i++){
-            var hourlyTotal = 0;
-
-            for(var j=0; j<allStores.length; j++){
-                hourlyTotal += allStores[j].cookiesSoldEachHour[i];
-                totalOfAllTotals += allStores[j].cookiesSoldEachHour[i];
-
-            }
-
-        }
-    }
  

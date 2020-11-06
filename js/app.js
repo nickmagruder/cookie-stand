@@ -68,9 +68,30 @@ function generateHeaderRow() {
     insertTr.appendChild(insertTotalTh);
 }
 
-generateHeaderRow()
+function generateFooterRow() {
+    var footerTotals = 0;
+    var insertParent = document.getElementById('cookiedata');
+    var insertTr = document.createElement('tr');
+    insertParent.appendChild(insertTr);
+    var insertTd = document.createElement('td');
+    insertTd.textContent = 'Totals';
+    insertTr.appendChild(insertTd);
+    for (var i = 0; i < hoursArray.length; i++) {
+        var hourTotal = 0;
+        for (var x = 0; x < cityData.length; x++) {
+          hourTotal += cityData[x].randomHrCookies[i];
+          footerTotals += cityData[x].randomHrCookies[i];
+        }
+        var insertTd = document.createElement('td');
+        insertTd.textContent = hourTotal;
+        insertTr.appendChild(insertTd);
+    }
+      var insertTd = document.createElement('td');
+      insertTd.textContent = footerTotals;
+      insertTr.appendChild(insertTd);
+}
 
-
+generateHeaderRow();
 
 seattle.insert();
 tokyo.insert();
@@ -78,4 +99,4 @@ dubai.insert();
 paris.insert();
 lima.insert();
 
-
+generateFooterRow();
